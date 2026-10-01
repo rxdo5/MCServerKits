@@ -60,7 +60,7 @@ checks:
       actions: ["notify", "kick"]
       max_vl: 3
     regen:
-      enabled: true
+      enabled: false
       threshold: 0.01
       actions: ["notify", "setback"]
       max_vl: 5
