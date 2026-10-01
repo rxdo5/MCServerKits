@@ -165,7 +165,7 @@ These scripts are **excluded from the licensing restrictions stated above**.
 
 ### ServerStarterJar Attribution
 
-The included `server.jar` executable is based on [NeoForged's ServerStarterJar](https://github.com/neoforged/ServerStarterJar), Copyright © NeoForged contributors, and is subject to its own license terms. (see [`licenses/ServerStarterJar.txt`](licenses/ServerStarterJar.txt)).
+Some files are from [NeoForged's ServerStarterJar](https://github.com/neoforged/ServerStarterJar), Copyright © NeoForged contributors, and are subject to their own license terms (see [`licenses/ServerStarterJar.txt`](licenses/ServerStarterJar.txt)).
 
 ---
 
