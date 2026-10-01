@@ -1,0 +1,101 @@
+# MeshAC Configuration
+# See https://github.com/GoatTech-42/MeshAC for documentation
+
+checks:
+  enabled: true
+  entries:
+    reach:
+      enabled: true
+      threshold: 3.01
+      actions: ["notify", "setback"]
+      max_vl: 5
+    fly:
+      enabled: false
+      threshold: 0.01
+      actions: ["notify", "setback"]
+      max_vl: 3
+    speed:
+      enabled: false
+      threshold: 0.01
+      actions: ["notify", "setback"]
+      max_vl: 3
+    killaura:
+      enabled: false
+      threshold: 0.5
+      actions: ["notify", "setback"]
+      max_vl: 5
+    velocity:
+      enabled: true
+      threshold: 0.01
+      actions: ["notify"]
+      max_vl: 10
+    tpaura:
+      enabled: true
+      threshold: 0.01
+      actions: ["notify", "setback"]
+      max_vl: 5
+    multiaura:
+      enabled: true
+      threshold: 0.01
+      actions: ["notify", "kick"]
+      max_vl: 3
+    antiknockback:
+      enabled: true
+      threshold: 0.01
+      actions: ["notify"]
+      max_vl: 5
+    invwalk:
+      enabled: true
+      threshold: 0.01
+      actions: ["notify", "setback"]
+      max_vl: 5
+    servercrasher:
+      enabled: false
+      threshold: 0.01
+      actions: ["notify", "kick"]
+      max_vl: 2
+    cmdblock:
+      enabled: true
+      threshold: 0.01
+      actions: ["notify", "kick"]
+      max_vl: 3
+    regen:
+      enabled: true
+      threshold: 0.01
+      actions: ["notify", "setback"]
+      max_vl: 5
+
+tools:
+  spectate: true
+  freeze: true
+  click_analysis: true
+  web_api: false
+
+alerts:
+  enabled: true
+  min_vl: 2
+  webhook_url: ""
+
+logging:
+  database: "sqlite"
+  retention_days: 30
+
+geyser:
+  exempt: true
+
+viaversion:
+  aware: true
+
+punishment:
+  enabled: true
+  warn_threshold: 3
+  kick_threshold: 6
+  tempban_threshold: 10
+  ban_threshold: 15
+  tempban_duration_seconds: 3600
+
+performance:
+  max_players_per_tick: 50
+  min_tps: 18.0
+  async_checking: true
+  mode: "balanced"
