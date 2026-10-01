@@ -1,0 +1,82 @@
+{
+  "CONFIG_VERSION_DONT_TOUCH_THIS": 3,
+  "_comment": "Before changing anything, see https://github.com/Patbox/StyledChat#configuration",
+  "text_formatting": {
+    "legacy_formatting": false,
+    "parse_links": true,
+    "parse_mentions": false,
+    "markdown": true,
+    "respect_colors_client_setting": true
+  },
+  "auto_completion": {
+    "tags": false,
+    "tag_aliases": false,
+    "emoticons": false
+  },
+  "default": {
+    "display_name": "${default}",
+    "message_formats": {
+      "chat": "<c:#55FF55>${player}</c> <c:#B06CFF>›</c> <white>${message}</white>",
+      "joined_the_game": "<dark_green>+ <green><lang:multiplayer.player.joined:'${player}'></green></dark_green>",
+      "joined_after_name_change": "<dark_green>+ <green><lang:multiplayer.player.joined.renamed:'${player}':'${old_name}'></green></dark_green>",
+      "joined_for_first_time": "<dark_green>+ <green><lang:multiplayer.player.joined:'${player}'></green></dark_green>",
+      "left_game": "<dark_red>− <red><lang:multiplayer.player.left:'${player}'></red></dark_red>",
+      "base_death": "${default_message}",
+      "advancement_task": "<gray><lang:chat.type.advancement.task:'${player}':'${advancement}'></gray>",
+      "advancement_challenge": "<c:#B06CFF><lang:chat.type.advancement.challenge:'${player}':'${advancement}'></c>",
+      "advancement_goal": "<green><lang:chat.type.advancement.goal:'${player}':'${advancement}'></green>",
+      "sent_team_chat": "<dark_green>[Team]</dark_green> <c:#55FF55>${displayName}</c> <c:#B06CFF>›</c> <white>${message}</white>",
+      "received_team_chat": "<dark_green>[Team]</dark_green> <c:#55FF55>${displayName}</c> <c:#B06CFF>›</c> <white>${message}</white>",
+      "sent_private_message": "<gray><italic><lang:commands.message.display.outgoing:'${receiver}':'${message}'>",
+      "received_private_message": "<gray><italic><lang:commands.message.display.incoming:'${sender}':'${message}'>",
+      "say_command": "<gray>[${player}]</gray> <white>${message}</white>",
+      "me_command": "<c:#B06CFF>* <italic>${player} ${message}</italic></c>",
+      "pet_death": "${default_message}"
+    },
+    "link_style": "<underline><c:#B06CFF>${link}",
+    "mention_style": "<c:#55FF55>%player:displayname%</c>",
+    "spoiler_style": "<gray>${spoiler}",
+    "spoiler_symbol": "▌",
+    "formatting": {
+      "dark_red": true,
+      "green": true,
+      "underline": true,
+      "dark_green": true,
+      "black": true,
+      "yellow": true,
+      "bold": true,
+      "italic": true,
+      "dark_blue": true,
+      "dark_purple": true,
+      "gold": true,
+      "red": true,
+      "aqua": true,
+      "quote": true,
+      "gray": true,
+      "light_purple": true,
+      "blue": true,
+      "white": true,
+      "dark_aqua": true,
+      "dark_gray": true,
+      "spoiler": true,
+      "strikethrough": true
+    },
+    "emoticons": {
+      "$emojibase:builtin:joypixels": "${emoji}",
+      "shrug": "¯\\_(ツ)_/¯",
+      "table": "(╯°□°）╯︵ ┻━┻",
+      "sword": "🗡",
+      "bow": "🏹",
+      "trident": "🔱",
+      "rod": "🎣",
+      "potion": "🧪",
+      "shears": "✂",
+      "bucket": "🪣",
+      "bell": "🔔",
+      "item": "[%player:equipment_slot mainhand%]",
+      "pos": "%player:pos_x% %player:pos_y% %player:pos_z%"
+    },
+    "custom_message_types": {}
+  },
+  "styles": []
+}

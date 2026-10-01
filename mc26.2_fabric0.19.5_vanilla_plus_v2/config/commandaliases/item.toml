@@ -1,0 +1,7 @@
+schemaVersion = 1
+commandMode = "COMMAND_CUSTOM"
+command = "item"
+
+[[actions]]
+command = "say :item:"
+commandType = "CLIENT"

@@ -19,7 +19,7 @@ This kit is designed to be downloaded, extracted and started with minimal config
 | **Java**            | Java version compatible with Minecraft 26.2 |
 | **Initial RAM**     | 4 GB                                        |
 | **Maximum RAM**     | 8 GB                                        |
-| **Mod Count**       | 48                                          |
+| **Mod Count**       | 70                                          |
 
 ---
 
@@ -29,9 +29,10 @@ This kit is designed to be downloaded, extracted and started with minimal config
 * ⚡ **Performance optimized** — Includes multiple server-side optimization mods.
 * 🧩 **Pre-configured modpack** — Required mods are downloaded automatically on first start.
 * 🌍 **World optimization** — Includes chunk pre-generation and world-generation optimizations.
-* 🛡️ **Server administration & security** — Permissions, logging, claims, authentication and anti-cheat tools.
+* 🛡️ **Server administration & security** — Permissions, logging, claims, authentication, command control and anti-xray tools.
 * 🎮 **Quality of life** — Homes, warps, TPA, Veinminer, Tree Harvester and more.
 * 🌐 **Cross-platform multiplayer** — Includes Geyser-Fabric for Bedrock connectivity.
+* 💬 **Custom chat** — Styled Chat with emoji shortcodes and handy chat shortcuts (`:shrug:`, `:item:`, `:pos:`...).
 * 📊 **Performance monitoring** — Spark is included for server profiling and diagnostics.
 
 ---
@@ -41,15 +42,18 @@ This kit is designed to be downloaded, extracted and started with minimal config
 ### ⚡ Performance & Optimization
 
 * **Alternate Current** — `1.9.0`
-* **C2ME** — `0.4.2-alpha.0.52`
-* **C2ME OpenCL Acceleration** — `0.4.2-alpha.0.52`
+* **Brainier Bees** — `1.10.2`
+* **C2ME** — `0.4.2-alpha.0.55`
 * **Clumps** — `26.2.1`
 * **FerriteCore** — `9.0.0`
 * **Get It Together, Drops!** — `1.5.1`
 * **Immersive Optimization** — `0.2.0`
 * **Krypton** — `0.3.1`
+* **Ksyxis** — `1.4.5`
+* **Lazy AI** — `1.7.0`
 * **Let Me Despawn** — `1.26.9.1`
 * **Lithium** — `0.25.3+mc26.2`
+* **Lomka** — `0.6.0`
 * **ModernFix** — `5.27.19-build.2`
 * **Noisium** — `2.8.5+mc26.2-pre-2`
 * **ScalableLux** — `0.3.0-alpha.0.3`
@@ -66,23 +70,36 @@ This kit is designed to be downloaded, extracted and started with minimal config
 
 * **AntiXray** — `1.4.16+26.1`
 * **Auth** — `1.6.2`
+* **Command Aliases** — `1.0.4`
 * **Ledger** — `1.3.23`
+* **Log Cleaner** — `1.0.0`
 * **LuckPerms** — `5.5.85`
-* **MeshAC** — `1.0.0`
 * **Open Parties and Claims** — `0.31.6`
+* **Panda Command Whitelist** — `1.2.0+26.2`
+* **Spark** — `1.10.187`
 
 ### 🎮 Gameplay & Quality of Life
 
 * **Corpse** — `1.2.1`
 * **Dynamic Lights** — `1.9.3`
-* **FSit Continued** — `3.0.1-beta.2+mc26.2`
+* **FSit Continued** — `4.0.0-alpha.1+mc26.2`
+* **Fuji** — `14.12.0`
+* **Healing Campfire** — `6.3`
+* **Invisible Frames** — `2.0.1+26.2`
+* **Mob Heads** — `5.1.1`
+* **Mob Heads Powers** — `2.1.4`
+* **More Mobs** — `1.5.11`
 * **Players Drop Heads** — `107.1`
+* **Random Mob Sizes** — `—`
 * **Server Carry** — `—`
-* **Simple Warp TPA Home Back** — `1.3`
+* **Set Home** — `0.0.2`
+* **Skeleton Horse Spawn** — `4.1`
 * **SwingThroughGrass** — `1.0.1`
-* **Spawn Animations** — `1.11.6`
+* **TPA Mod** — `1.3.1`
 * **Tree Harvester** — `9.4`
+* **Unloaded Activity** — `0.7.0+mc26.2`
 * **Veinminer** — `2.12.1`
+* **Zombie Horse Spawn** — `5.2`
 
 ### 💬 Social & Presentation
 
@@ -90,10 +107,14 @@ This kit is designed to be downloaded, extracted and started with minimal config
 * **Styled Chat** — `2.13.0+26.2`
 * **Styled Player List** — `3.12.0+26.2`
 
-### 🌐 Connectivity & Compatibility
+### 🌐 Connectivity, Compatibility & Fixes
 
+* **Debugify** — `26.2.0.1`
 * **Disconnect Packet Fix** — `2.2.0`
 * **Geyser-Fabric** — `2.11.3-b1247`
+* **I'm Fast** — `1.0.3`
+* **PacketFixer** — `3.3.6`
+* **Pet Teleport Fix** — `2.0-alpha-3.7`
 * **SkinRestorer** — `2.11.0+26.1`
 
 ### 🧩 Libraries & Dependencies
@@ -104,7 +125,10 @@ This kit is designed to be downloaded, extracted and started with minimal config
 * **Fabric API** — `0.161.0+26.2`
 * **Fabric Language Kotlin** — `1.14.1+kotlin.2.4.20`
 * **Forge Config API Port** — `26.2.1`
+* **lib-5555ff** — `1.1.5`
+* **MidnightLib** — `1.9.3+26.2`
 * **ToadLib** — `1.5.1`
+* **ZConfig** — `1.0.0+26.x`
 
 ---
 
@@ -185,6 +209,115 @@ This kit includes **Geyser-Fabric**, allowing Minecraft Bedrock Edition players 
 **SkinRestorer** is also included for improved skin compatibility.
 
 Additional Geyser configuration may be required depending on your network setup.
+
+---
+
+## 💬 Chat Emojis & Shortcuts
+
+Chat formatting is handled by **Styled Chat**. Players can type **`:name:`** in chat and it is replaced automatically.
+
+```text
+:shrug:      →  ¯\_(ツ)_/¯
+:table:      →  (╯°□°）╯︵ ┻━┻
+:sword:      →  🗡
+:bow:        →  🏹
+:trident:    →  🔱
+:rod:        →  🎣
+:potion:     →  🧪
+:shears:     →  ✂
+:bucket:     →  🪣
+:bell:       →  🔔
+:item:       →  the item you are holding in your main hand
+:pos:        →  your current coordinates (X Y Z)
+```
+
+On top of these, **all JoyPixels emoji shortcodes** are enabled, so things like `:smile:` or `:heart:` also work.
+
+### Customizing the shortcuts
+
+The list can be changed in the **Styled Chat** configuration file (`config/styled-chat.json`), inside the `emoticons` section:
+
+```json
+"emoticons": {
+  "$emojibase:builtin:joypixels": "${emoji}",
+  "shrug": "¯\\_(ツ)_/¯",
+  "table": "(╯°□°）╯︵ ┻━┻",
+  "sword": "🗡",
+  "bow": "🏹",
+  "trident": "🔱",
+  "rod": "🎣",
+  "potion": "🧪",
+  "shears": "✂",
+  "bucket": "🪣",
+  "bell": "🔔",
+  "item": "[%player:equipment_slot mainhand%]",
+  "pos": "%player:pos_x% %player:pos_y% %player:pos_z%"
+}
+```
+
+* The **key** is the name players type between colons (`"shrug"` → `:shrug:`).
+* The **value** is what it turns into. It can be plain text, an emoji or a placeholder such as `%player:pos_x%`.
+* `$emojibase:builtin:joypixels` loads the full JoyPixels emoji set. Remove that line to disable the built-in emojis.
+* Apply your changes with `/styledchat reload` (or restart the server).
+
+---
+
+## ⌨️ Commands Available in Survival
+
+These are the commands players can use in survival. Every other command is hidden from the command suggestions and blocked.
+
+This is configured with **[PandaCommandWhitelist](https://modrinth.com/project/LUNkqJ63)** — thanks to its author for the mod! 🐼
+
+| Command | Description |
+| ------- | ----------- |
+| `/tell <player> <message>`, `/msg`, `/w` | Send a private message to a player. |
+| `/r <message>` | Reply to the last private message you received. |
+| `/me <action>` | Send an action message in chat. |
+| `/ignore <player>` | Hide a player's messages. |
+| `/unignore <player>` | Stop ignoring a player. |
+| `/ignorelist` | Show the players you are ignoring. |
+| `/sethome` | Set your home at your current location. |
+| `/home` | Teleport to your home. |
+| `/tpa <player>` | Send a teleport request to a player. |
+| `/tpaccept` | Accept a pending teleport request. |
+| `/pets` | Pet management. |
+| `/register` | Create your account the first time you join (login system). |
+| `/login` | Log in every time you join. |
+| `/changepassword` | Change your password. |
+
+### Customizing the allowed commands
+
+The list lives in the **PandaCommandWhitelist** config file (inside `config/`):
+
+```json
+{
+  "commands": [
+    "tell *",
+    "me *",
+    "msg *",
+    "w *",
+    "r *",
+
+    "ignore *",
+    "unignore *",
+    "ignorelist",
+
+    "home",
+    "sethome",
+    "login *",
+    "register *",
+    "changepassword *",
+    "tpa *",
+    "tpaccept",
+    "pets"
+  ],
+  "blockedMessage": "That command is blocked or doesn\u0027t exist."
+}
+```
+
+* Each entry is a command that is allowed. A trailing `*` is a wildcard that allows any arguments (`"tell *"` allows `/tell Steve hello`); without it, only the bare command is allowed.
+* `blockedMessage` is what players see when they try a command that is not on the list.
+* To allow another command, add it to `commands` and restart the server.
 
 ---
 
