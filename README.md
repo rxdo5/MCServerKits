@@ -1,0 +1,159 @@
+# 🎮 MCServerKits
+
+> **Ready-to-use Minecraft server kits — download, configure and play.**
+
+## ⚠️ IMPORTANT — MINECRAFT EULA
+
+> **BY DOWNLOADING OR USING ANY SERVER KIT FROM THIS REPOSITORY, YOU ACKNOWLEDGE THAT YOU MUST COMPLY WITH THE [MINECRAFT END USER LICENSE AGREEMENT (EULA)](https://www.minecraft.net/eula).**
+>
+> **Downloading a server kit does not grant you any additional rights to Minecraft or its assets. You are responsible for ensuring that your use of Minecraft and the server kit complies with the applicable Minecraft EULA and other applicable terms.**
+>
+> **Please read the Minecraft EULA before downloading or using any server kit.**
+
+---
+
+MCServerKits is a collection of **pre-built Minecraft server setups** designed to make deploying a Minecraft server as simple as possible.
+
+Each kit comes with its configuration and start scripts, allowing you to get your server running with minimal setup. The mods are **not** stored in this repository: they are downloaded automatically from their original source ([Modrinth](https://modrinth.com)) the first time you start the server, and each file is verified with a SHA-512 hash.
+
+---
+
+## ✨ Features
+
+* 🚀 **Ready to use** — Download a kit and start your server.
+* ⚙️ **Pre-configured** — Server files and configurations are prepared for you.
+* 📥 **Automatic mod download** — Mods are fetched from their original source on first start (internet connection required).
+* 🧩 **Multiple server types** — Support for different Minecraft server configurations.
+* 🖥️ **Cross-platform** — Run your server on Windows, Linux and macOS.
+* 📦 **Simple setup** — No complicated installation process.
+* 🔧 **ServerStarterJar** — Automatic server installation for supported Forge and NeoForge versions.
+
+---
+
+## 📥 Installation
+
+### 1. Download
+
+Download the server kit you want from this repository.
+
+> ⚠️ **By downloading or using a server kit, you acknowledge that you are responsible for complying with the Minecraft EULA and any other applicable terms.**
+
+### 2. Configure
+
+If the kit contains a `variables.txt` file, check its configuration before starting the server.
+
+If you have:
+
+```text
+JAVA=java
+```
+
+set in `variables.txt`, a suitable Java version for the Minecraft server will be installed automatically.
+
+---
+
+## ▶️ Starting the Server
+
+### 🐧 Linux
+
+Run:
+
+```bash
+./start.sh
+```
+
+or:
+
+```bash
+bash start.sh
+```
+
+### 🪟 Windows
+
+Run:
+
+```text
+start.bat
+```
+
+> ⚠️ **Do not delete the `.ps1` PowerShell files.**
+
+You can also run `start.ps1` manually from a PowerShell console, but using `start.bat` is recommended.
+
+**TL;DR: `start.bat` > `start.ps1`**
+
+### 🍎 macOS
+
+Run:
+
+```bash
+./start.sh
+```
+
+or:
+
+```bash
+bash start.sh
+```
+
+---
+
+## ⚠️ Forge & NeoForge
+
+For **Forge and NeoForge 1.17+**, `run.*` scripts may be created automatically by `ServerStarterJar`.
+
+These files are safe to ignore. Continue using the provided `start.*` scripts.
+
+> ❗ **Do not delete the `run.*` scripts.**
+>
+> Deleting them may cause the server to be installed again by `ServerStarterJar`.
+
+More information about ServerStarterJar:
+
+https://github.com/neoforged/ServerStarterJar
+
+---
+
+## 🛠️ Troubleshooting
+
+### Having issues with a server kit?
+
+If you downloaded a server kit from the internet and encounter problems, please contact the **creator of that specific server kit**.
+
+If you created the server kit yourself and need help with the server creation process, contact the **ServerPackCreator developers** for support.
+
+---
+
+## 📜 License
+
+**MCServerKits License**
+
+This project is provided under a custom license.
+
+You are allowed to:
+
+* ✅ Download the server kits.
+* ✅ Use the server kits for personal or commercial Minecraft servers.
+
+You are **not** allowed to:
+
+* ❌ Redistribute or re-upload the files.
+* ❌ Sell or sublicense the files.
+* ❌ Modify and redistribute the files.
+* ❌ Include the files in another downloadable project.
+* ❌ Claim the original work as your own.
+* ❌ Remove copyright or license notices.
+
+Third-party components keep their own licenses: every mod is licensed by its author, and the `start.*` / `install_java.*` scripts are © Griefed ([ServerPackCreator](https://github.com/Griefed/ServerPackCreator)) under the LGPL-2.1-or-later. The MCServerKits License only covers the original MCServerKits content.
+
+See [`LICENSE`](LICENSE) for the complete license.
+
+---
+
+## ❤️ MCServerKits
+
+Built for Minecraft server owners who want to **download, start and play** without unnecessary setup.
+
+**Download. Start. Play.**
+
+> ⚠️ **REMINDER: Downloading or using a server kit means you are responsible for complying with the Minecraft EULA.**
