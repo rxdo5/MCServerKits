@@ -1,0 +1,23 @@
+{
+  "commands": [
+    "tell *",
+    "me *",
+    "msg *",
+    "w *",
+    "r *",
+
+    "ignore *",
+    "unignore *",
+    "ignorelist",
+
+    "home",
+    "sethome",
+    "login *",
+    "register *",
+    "changepassword *",
+    "tpa *",
+    "tpaccept",
+    "pets"
+  ],
+  "blockedMessage": "That command is blocked or doesn\u0027t exist."
+}

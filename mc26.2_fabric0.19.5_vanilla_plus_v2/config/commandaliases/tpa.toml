@@ -1,0 +1,12 @@
+schemaVersion = 1
+commandMode = "COMMAND_CUSTOM"
+command = "tpa"
+
+[[children]]
+child = "player"
+type = "argument"
+argumentType = "minecraft:player"
+
+  [[children.actions]]
+  command = "trigger tpa.want_tp_to"
+  commandType = "CLIENT"

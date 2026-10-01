@@ -1,0 +1,12 @@
+schemaVersion = 1
+commandMode = "COMMAND_CUSTOM"
+command = "register"
+
+[[children]]
+child = "key"
+type = "argument"
+argumentType = "minecraft:string"
+
+  [[children.actions]]
+  command = "trigger register set {{key}}"
+  commandType = "CLIENT"

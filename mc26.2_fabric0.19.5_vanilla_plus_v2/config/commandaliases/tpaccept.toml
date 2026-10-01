@@ -1,0 +1,7 @@
+schemaVersion = 1
+commandMode = "COMMAND_CUSTOM"
+command = "tpaccept"
+
+[[actions]]
+command = "trigger tpa.accept_tp"
+commandType = "CLIENT"

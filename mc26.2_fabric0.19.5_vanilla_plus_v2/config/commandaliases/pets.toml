@@ -1,0 +1,7 @@
+schemaVersion = 1
+commandMode = "COMMAND_CUSTOM"
+command = "pets"
+
+[[actions]]
+command = "trigger pet"
+commandType = "CLIENT"

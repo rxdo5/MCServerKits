@@ -1,0 +1,7 @@
+schemaVersion = 1
+commandMode = "COMMAND_CUSTOM"
+command = "sethome"
+
+[[actions]]
+command = "trigger SetHome"
+commandType = "CLIENT"

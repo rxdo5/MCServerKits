@@ -1,0 +1,7 @@
+schemaVersion = 1
+commandMode = "COMMAND_CUSTOM"
+command = "home"
+
+[[actions]]
+command = "trigger Home"
+commandType = "CLIENT"

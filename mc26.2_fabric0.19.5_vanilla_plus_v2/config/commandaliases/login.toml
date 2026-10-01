@@ -1,0 +1,12 @@
+schemaVersion = 1
+commandMode = "COMMAND_CUSTOM"
+command = "login"
+
+[[children]]
+child = "key"
+type = "argument"
+argumentType = "minecraft:word"
+
+  [[children.actions]]
+  command = "trigger login set {{key}}"
+  commandType = "CLIENT"
