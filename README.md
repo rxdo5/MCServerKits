@@ -9,6 +9,9 @@
 > **Downloading a server kit does not grant you any additional rights to Minecraft or its assets. You are responsible for ensuring that your use of Minecraft and the server kit complies with the applicable Minecraft EULA and other applicable terms.**
 >
 > **Please read the Minecraft EULA before downloading or using any server kit.**
+>
+>**Servers must also comply with Mojang's Minecraft Usage Guidelines. Please refer to [Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines) for more information.**
+>
 
 ---
 
