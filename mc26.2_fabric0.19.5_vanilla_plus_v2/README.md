@@ -227,8 +227,8 @@ Chat formatting is handled by **Styled Chat**. Players can type **`:name:`** in 
 :shears:     →  ✂
 :bucket:     →  🪣
 :bell:       →  🔔
-:item:       →  the item you are holding in your main hand
-:pos:        →  your current coordinates (X Y Z)
+:item:       →  the item you are holding in your main hand (visible to everyone in chat)
+:pos:        →  your current coordinates, X Y Z (visible to everyone in chat)
 ```
 
 On top of these, **all JoyPixels emoji shortcodes** are enabled, so things like `:smile:` or `:heart:` also work.
@@ -284,6 +284,10 @@ This is configured with **[PandaCommandWhitelist](https://modrinth.com/project/L
 | `/register` | Create your account the first time you join (login system). |
 | `/login` | Log in every time you join. |
 | `/changepassword` | Change your password. |
+| `/pos` | Send your current coordinates (X Y Z) to the chat so everyone can see them. |
+| `/item` | Show the item you are holding in your main hand to everyone in the chat. |
+
+> 💡 You can also use the **chat shortcuts** `:pos:` and `:item:` (from Styled Chat) inside a normal message, for example: `I found diamonds at :pos:` or `Look at my :item:`. They show the same information, but inside your own text.
 
 ### Customizing the allowed commands
 
@@ -309,7 +313,10 @@ The list lives in the **PandaCommandWhitelist** config file (inside `config/`):
     "changepassword *",
     "tpa *",
     "tpaccept",
-    "pets"
+    "pets",
+
+    "pos",
+    "item"
   ],
   "blockedMessage": "That command is blocked or doesn\u0027t exist."
 }
