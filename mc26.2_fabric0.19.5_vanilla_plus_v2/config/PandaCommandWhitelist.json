@@ -20,7 +20,10 @@
     "pets",
 
     "pos",
-    "item"
+    "item",
+
+    "oclaims *",
+    "oparties *"
   ],
   "blockedMessage": "That command is blocked or doesn\u0027t exist."
 }
