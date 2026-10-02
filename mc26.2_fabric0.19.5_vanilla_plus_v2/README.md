@@ -286,6 +286,8 @@ This is configured with **[PandaCommandWhitelist](https://modrinth.com/project/L
 | `/changepassword` | Change your password. |
 | `/pos` | Send your current coordinates (X Y Z) to the chat so everyone can see them. |
 | `/item` | Show the item you are holding in your main hand to everyone in the chat. |
+| `/oclaims` | Manage the chunk claims you own on the server or claim new ones. |
+| `/oparties` | Create or join a party with your friends. |
 
 > 💡 You can also use the **chat shortcuts** `:pos:` and `:item:` (from Styled Chat) inside a normal message, for example: `I found diamonds at :pos:` or `Look at my :item:`. They show the same information, but inside your own text.
 
@@ -316,7 +318,10 @@ The list lives in the **PandaCommandWhitelist** config file (inside `config/`):
     "pets",
 
     "pos",
-    "item"
+    "item",
+
+    "oclaims*",
+    "oparties*"
   ],
   "blockedMessage": "That command is blocked or doesn\u0027t exist."
 }
