@@ -1,12 +1,19 @@
 # audit-mods.ps1
-# Identifies every .jar in the mods folder on Modrinth (by SHA-512 hash) and generates:
-#   - mods-audit.csv : what each mod is, the license its author declares, and whether it is on Modrinth
+# Identifies every file in a folder on Modrinth (by SHA-512 hash) and generates:
+#   - mods-audit.csv : what each file is, the license its author declares, and whether it is on Modrinth
 #   - mods.lock.tsv  : name <TAB> sha512 <TAB> official download URL (used by install-mods.*)
 #
-# Usage (from the kit folder, where mods\ is located):
+# Usage for the mods (from the kit folder, where mods\ is located):
 #   powershell -ExecutionPolicy Bypass -File .\audit-mods.ps1
+#
+# Usage for data packs (the .zip files you downloaded from Modrinth, in any folder):
+#   powershell -ExecutionPolicy Bypass -File .\audit-mods.ps1 -ModsDir .\world\datapacks -Filter *.zip `
+#       -LockFile datapacks.lock.tsv -CsvFile datapacks-audit.csv
 param(
-    [string]$ModsDir = ".\mods"
+    [string]$ModsDir  = ".\mods",
+    [string]$Filter   = "*.jar",
+    [string]$LockFile = "mods.lock.tsv",
+    [string]$CsvFile  = "mods-audit.csv"
 )
 
 $ErrorActionPreference = "Stop"
@@ -15,10 +22,10 @@ $Api = "https://api.modrinth.com/v2"
 $Headers = @{ "User-Agent" = "rxdo5/MCServerKits (mod audit script)" }
 $Here = (Resolve-Path ".").Path
 
-$jars = Get-ChildItem -Path $ModsDir -Filter *.jar -File
-if (-not $jars) { throw "No .jar files found in $ModsDir" }
+$jars = Get-ChildItem -Path $ModsDir -Filter $Filter -File
+if (-not $jars) { throw "No $Filter files found in $ModsDir" }
 
-# 1) SHA-512 hash of every jar
+# 1) SHA-512 hash of every file
 $byHash = @{}
 foreach ($j in $jars) {
     $h = (Get-FileHash -Algorithm SHA512 -Path $j.FullName).Hash.ToLower()
@@ -90,15 +97,15 @@ foreach ($h in $byHash.Keys) {
 }
 
 $rows = $rows | Sort-Object Status, File
-$rows | Export-Csv -Path (Join-Path $Here "mods-audit.csv") -NoTypeInformation -Encoding UTF8
+$rows | Export-Csv -Path (Join-Path $Here $CsvFile) -NoTypeInformation -Encoding UTF8
 
 $header = "# name`tsha512`turl"
 $text = $header + "`n" + (($lock | Sort-Object) -join "`n") + "`n"
-[IO.File]::WriteAllText((Join-Path $Here "mods.lock.tsv"), $text)
+[IO.File]::WriteAllText((Join-Path $Here $LockFile), $text)
 
 $rows | Format-Table File, Status, License -AutoSize
 $notFound = @($rows | Where-Object { $_.Status -ne "On Modrinth" }).Count
 $review = @($rows | Where-Object { $_.Redistribution -like "REVIEW*" }).Count
 Write-Host ""
 Write-Host "Total: $($rows.Count) | Not found on Modrinth: $notFound | License to review: $review"
-Write-Host "Generated: mods-audit.csv and mods.lock.tsv"
+Write-Host "Generated: $CsvFile and $LockFile"

@@ -32,6 +32,7 @@ This kit is designed to be downloaded, extracted and started with minimal config
 * 🛡️ **Server administration & security** — Permissions, logging, claims, authentication, command control and anti-xray tools.
 * 🎮 **Quality of life** — Homes, warps, TPA, Veinminer, Tree Harvester and more.
 * 🌐 **Cross-platform multiplayer** — Includes Geyser-Fabric for Bedrock connectivity.
+* 🏆 **Advancements** — Includes BlazeandCave's Advancements Pack (1,000+ extra advancements) as a data pack.
 * 💬 **Custom chat** — Styled Chat with emoji shortcodes and handy chat shortcuts (`:shrug:`, `:item:`, `:pos:`...).
 * 📊 **Performance monitoring** — Spark is included for server profiling and diagnostics.
 
@@ -266,6 +267,9 @@ The list can be changed in the **Styled Chat** configuration file (`config/style
 
 These are the commands players can use in survival. Every other command is hidden from the command suggestions and blocked.
 
+> [!IMPORTANT]
+> **Login & Register:** even if the game tells you to use `trigger login set ...` or `trigger register set ...`, that is simply **`/login`** and **`/register`**. Use those commands to log in or to create your account.
+
 This is configured with **[PandaCommandWhitelist](https://modrinth.com/project/LUNkqJ63)** — thanks to its author for the mod! 🐼
 
 | Command | Description |
@@ -281,8 +285,8 @@ This is configured with **[PandaCommandWhitelist](https://modrinth.com/project/L
 | `/tpa <player>` | Send a teleport request to a player. |
 | `/tpaccept` | Accept a pending teleport request. |
 | `/pets` | Pet management. |
-| `/register` | Create your account the first time you join (login system). |
-| `/login` | Log in every time you join. |
+| `/register` | Create your account the first time you join (login system). See the **important note** above. |
+| `/login` | Log in every time you join. See the **important note** above. |
 | `/changepassword` | Change your password. |
 | `/pos` | Send your current coordinates (X Y Z) to the chat so everyone can see them. |
 | `/item` | Show the item you are holding in your main hand to everyone in the chat. |
@@ -333,6 +337,70 @@ The list lives in the **PandaCommandWhitelist** config file (inside `config/`):
 
 ---
 
+## 🌟 Gameplay Highlights
+
+A quick look at some of the gameplay mods included in this kit.
+
+### 🛡️ Claims & Parties — [Open Parties and Claims](https://modrinth.com/project/gF3BGWvG)
+
+Protect your builds by claiming chunks, and team up with your friends in parties.
+
+* `/oclaims` — claim and unclaim chunks and manage your claims.
+* `/oparties` — create a party and invite your friends.
+* Press **Tab** after either command to see every sub-command.
+* Players who also install the mod on their client get an in-game menu.
+
+### 🔥 Healing Campfire — [Healing Campfire](https://modrinth.com/project/kOuPUitF)
+
+Standing near a campfire or a soul campfire gives **Regeneration** to players and passive mobs. By default: 16-block radius, Regeneration I, and the effect refreshes while you stay close. Made by Serilum.
+
+### 🖼️ Invisible Frames — [Invisible Frames](https://modrinth.com/project/QD87oMUf)
+
+**Sneak + right-click** an item frame to make it invisible. Do it again to make it visible. It is server-side, so every player can use it without installing anything. Made by Roundaround.
+
+### 🧟 Mob Heads & Mob Heads Powers — [Mob Heads](https://modrinth.com/project/82uI0waE) · [Mob Heads Powers](https://modrinth.com/project/JuEY513F)
+
+* **Mob Heads:** mobs can drop their head when a player kills them (or a charged creeper, configurable). There are 500+ unique heads (every mob, baby and variant), custom note block sounds, an advancement collection and a chat notification when a head drops. Looting does not change the drop rates.
+* **Mob Heads Powers:** **wear a mob head on your head to get a power.** For example, the Axolotl head gives longer water breathing, the Turtle head gives extra resistance but slows you down, and the Dolphin head gives Dolphin's Grace but also hunger and blindness.
+
+Both are made by Jodek, and Mob Heads Powers only works together with Mob Heads.
+
+### 💀 Players Drop Heads — [Players Drop Heads](https://modrinth.com/project/NU7qMnLN)
+
+When a player is killed by another player, they drop their own head.
+
+### 📏 Random Mob Sizes — [Random Mob Sizes](https://modrinth.com/project/aKeMRgHX)
+
+Mobs spawn in random sizes, from tiny to huge. By default a mob's health scales with its size, and the sizes can be configured per mob. It is server-side, so no client mod is needed.
+
+---
+
+## 📜 Data Packs
+
+### 🏆 BlazeandCave's Advancements Pack — [Modrinth](https://modrinth.com/project/VoVJ47kN)
+
+Adds **1,000+ new advancements** across 16 tabs (mining, farming, animals, monsters, biomes, redstone, enchanting, potions, super challenges and more), plus an advancement scoreboard, item rewards, trophies, cooperative mode and teams.
+
+Created by **Cavinator1** — thank you for this amazing pack! 🏆
+
+**How it is installed**
+
+The author's license does not allow redistributing the pack, so it is **not stored in this repository**. Like the mods, it is downloaded from Modrinth by the start scripts (it is listed in `datapacks.lock.tsv`) and placed in `world/datapacks/` **before the world is created**. Minecraft then loads it automatically the first time the server starts.
+
+**Configuration (operators only)**
+
+```text
+/function blazeandcave:config
+```
+
+From that menu you can toggle item rewards, trophies and the welcome message, choose which advancement tiers are announced, show the advancements scoreboard in the tab list or sidebar, and enable cooperative mode.
+
+> The pack was designed for vanilla servers and the author cannot guarantee compatibility with mods, so a few advancements may behave differently on this kit.
+>
+> Spanish and other languages: players can install the optional [BACAP Language Pack](https://modrinth.com/resourcepack/bacap-language-pack) resource pack to translate the advancements.
+
+---
+
 ## ⚙️ Recommended Hardware
 
 The actual requirements depend heavily on player count, simulation distance, view distance and world size.
@@ -353,7 +421,7 @@ As a starting point:
 
 ## 🚀 Getting Started
 
-Because this is a **premade server kit**, no manual mod installation should be necessary. The mods are not stored in this repository: on the first start they are downloaded from their original source (Modrinth) and verified by hash, so an internet connection is required.
+Because this is a **premade server kit**, no manual mod installation should be necessary. The mods and the data pack are not stored in this repository: on the first start they are downloaded from their original source (Modrinth) and verified by hash, so an internet connection is required.
 
 1. Download the kit.
 2. Extract it.
@@ -374,7 +442,7 @@ This kit contains mods with different dependencies and compatibility requirement
 
 **Do not remove or update individual mods without checking compatibility with Minecraft 26.2 and the rest of the kit.**
 
-The start scripts restore every mod listed in `mods.lock.tsv`. To permanently remove a mod, also delete its line from that file.
+The start scripts restore every mod listed in `mods.lock.tsv` and every data pack listed in `datapacks.lock.tsv`. To permanently remove one of them, also delete its line from that file.
 
 Some mods may also have specific configuration or server requirements.
 
@@ -392,9 +460,9 @@ server.properties
 
 The mods used by this kit are created and distributed by their respective authors. They are **not** included in this repository; they are downloaded from their original source.
 
-This kit does **not** claim ownership of any third-party mods.
+This kit does **not** claim ownership of any third-party mods or data packs. **BlazeandCave's Advancements Pack** is created by Cavinator1 and is downloaded from Modrinth, not redistributed here.
 
-See [`mods-audit.csv`](mods-audit.csv) for the list of mods, their project pages and the license each author declares. Please refer to each mod's license and distribution terms before redistributing any mod.
+See [`mods-audit.csv`](mods-audit.csv) for the list of mods and [`datapacks-audit.csv`](datapacks-audit.csv) for the data pack, with their project pages and the license each author declares. Please refer to each mod's license and distribution terms before redistributing any mod.
 
 For the license applying to **MCServerKits**, see the repository's [`LICENSE`](../LICENSE) file.
 

@@ -117,6 +117,47 @@ https://github.com/neoforged/ServerStarterJar
 
 ---
 
+## 🕵️ Hiding Your Server IP (Optional)
+
+By default, players connect straight to the public IP of the machine running the server. If you don't want to share your home IP, put a relay in front of the server so players only ever see the relay's address.
+
+| Option | Hides your IP? | Java | Bedrock (Geyser) | Notes |
+| ------ | :------------: | :--: | :--------------: | ----- |
+| **[playit.gg](https://playit.gg) tunnel** | ✅ | ✅ | ✅ | Free tier available. No port forwarding needed and it works behind CGNAT. **Easiest option.** |
+| **[TCPShield](https://tcpshield.com)** | ✅ | ✅ | ⚠️ | Free Java proxy with DDoS protection. Bedrock/Geyser support depends on the plan, so check their current plans. |
+| **Cheap VPS + reverse proxy** | ✅ | ✅ | ✅ | HAProxy, Nginx `stream` or a WireGuard tunnel to your machine. Most control, but it costs a few dollars a month. |
+| **Domain + SRV record** | ❌ | — | — | Gives you a nice address (`play.example.com`), but DNS still points to your IP. Combine it with one of the options above. |
+
+### Quick start with playit.gg
+
+1. Create a free account on [playit.gg](https://playit.gg), then download and run the agent on the machine that hosts the server.
+2. Create a **Minecraft Java** tunnel pointing to port `25565`.
+3. If you use Geyser, also create a **Minecraft Bedrock** tunnel pointing to port `19132`.
+4. Share the address playit.gg gives you with your players. Don't share your own IP.
+
+> With a tunnel you **don't** need to open or forward any port on your router.
+
+### More privacy tips
+
+* **If you use a proxy together with port forwarding**, configure your firewall to accept connections only from the proxy's IP addresses. Otherwise anyone who finds your real IP can still connect directly.
+* **Hide the player list** from the server list ping by setting `hide-online-players=true` in `server.properties`.
+* **Redact IPs before sharing logs.** `latest.log` contains the IP address of every player who connects. Before posting a log online, mask the addresses:
+
+```powershell
+# Windows (PowerShell)
+(Get-Content latest.log) -replace '\b\d{1,3}(\.\d{1,3}){3}(:\d+)?\b','x.x.x.x' | Set-Content latest-redacted.log
+```
+
+```bash
+# Linux / macOS
+sed -E 's/\b[0-9]{1,3}(\.[0-9]{1,3}){3}(:[0-9]+)?\b/x.x.x.x/g' latest.log > latest-redacted.log
+```
+
+> Hiding your IP is not a replacement for server security. Keep an authentication system or a whitelist enabled, especially if the server runs with `online-mode=false`.
+
+---
+
+
 ## 🛠️ Troubleshooting
 
 ### Having issues with a server kit?
@@ -166,6 +207,10 @@ These scripts are **excluded from the licensing restrictions stated above**.
 ### ServerStarterJar Attribution
 
 Some files are from [NeoForged's ServerStarterJar](https://github.com/neoforged/ServerStarterJar), Copyright © NeoForged contributors, and are subject to their own license terms (see [`licenses/ServerStarterJar.txt`](licenses/ServerStarterJar.txt)).
+
+### Final Disclaimer
+
+Third-party components keep their own licenses: every mod is licensed by its author, the MCServerKits License only covers the original MCServerKits content.
 
 ---
 

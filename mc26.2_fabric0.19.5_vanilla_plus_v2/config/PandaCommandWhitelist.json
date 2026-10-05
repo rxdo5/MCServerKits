@@ -23,7 +23,8 @@
     "item",
 
     "oclaims *",
-    "oparties *"
+    "oparties *",
+    "opm *"
   ],
   "blockedMessage": "That command is blocked or doesn\u0027t exist."
 }
