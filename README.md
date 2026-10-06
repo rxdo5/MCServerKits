@@ -17,7 +17,7 @@
 
 MCServerKits is a collection of **pre-built Minecraft server setups** designed to make deploying a Minecraft server as simple as possible.
 
-Each kit comes with its configuration and start scripts, allowing you to get your server running with minimal setup. The mods are **not** stored in this repository: they are downloaded automatically from their original source ([Modrinth](https://modrinth.com)) the first time you start the server, and each file is verified with a SHA-512 hash.
+Each kit comes with its configuration and start scripts, allowing you to get your server running with minimal setup. The mods and data packs are **not** stored in this repository: they are downloaded automatically from their original source ([Modrinth](https://modrinth.com)) the first time you start the server, and each file is verified with a SHA-512 hash.
 
 ---
 
@@ -25,7 +25,7 @@ Each kit comes with its configuration and start scripts, allowing you to get you
 
 * 🚀 **Ready to use** — Download a kit and start your server.
 * ⚙️ **Pre-configured** — Server files and configurations are prepared for you.
-* 📥 **Automatic mod download** — Mods are fetched from their original source on first start (internet connection required).
+* 📥 **Automatic mod and data pack download** — Mods and data packs are fetched from their original source on first start (internet connection required).
 * 🧩 **Multiple server types** — Support for different Minecraft server configurations.
 * 🖥️ **Cross-platform** — Run your server on Windows, Linux and macOS.
 * 📦 **Simple setup** — No complicated installation process.
@@ -157,7 +157,6 @@ sed -E 's/\b[0-9]{1,3}(\.[0-9]{1,3}){3}(:[0-9]+)?\b/x.x.x.x/g' latest.log > late
 
 ---
 
-
 ## 🛠️ Troubleshooting
 
 ### Having issues with a server kit?
@@ -190,11 +189,9 @@ You are **not** allowed to:
 
 **These restrictions apply only to the original content of this repository.**
 
-Third-party components retain their own licenses. Every mod is licensed by its respective author, and the `start.*` / `install_java.*` scripts are © Griefed ([ServerPackCreator](https://github.com/Griefed/ServerPackCreator)) under the LGPL-2.1-or-later. The included `server.jar` is based on [NeoForged's ServerStarterJar](https://github.com/neoforged/ServerStarterJar) and is subject to its own license terms.
+Third-party components retain their own licenses and are not covered by the MCServerKits License, which only covers the original MCServerKits content. Every mod and data pack is licensed by its respective author, and the `start.*` / `install_java.*` scripts are © Griefed ([ServerPackCreator](https://github.com/Griefed/ServerPackCreator)) under the LGPL-2.1-or-later. The included `server.jar` is based on [NeoForged's ServerStarterJar](https://github.com/neoforged/ServerStarterJar) and is subject to its own license terms.
 
-The MCServerKits License only covers the original MCServerKits content.
-
-**Commercial use of the server is subject to the individual licenses of the included mods. Please consult the `mods-audit.csv` file in each corresponding pack for licensing and commercial-use information.**
+**Commercial use of the server is subject to the individual licenses of the included mods. Please consult the `mods-audit.csv` file (and `datapacks-audit.csv`, if the pack includes data packs) in each corresponding pack for licensing and commercial-use information.**
 
 Servers must also comply with [Mojang's Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines).
 
@@ -207,10 +204,6 @@ These scripts are **excluded from the licensing restrictions stated above**.
 ### ServerStarterJar Attribution
 
 Some files are from [NeoForged's ServerStarterJar](https://github.com/neoforged/ServerStarterJar), Copyright © NeoForged contributors, and are subject to their own license terms (see [`licenses/ServerStarterJar.txt`](licenses/ServerStarterJar.txt)).
-
-### Final Disclaimer
-
-Third-party components keep their own licenses: every mod is licensed by its author, the MCServerKits License only covers the original MCServerKits content.
 
 ---
 

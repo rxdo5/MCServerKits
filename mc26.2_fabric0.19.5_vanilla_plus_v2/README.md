@@ -300,6 +300,8 @@ These are the commands players can use in survival. Every other command is hidde
 
 > [!IMPORTANT]
 > **Login & Register:** even if the game tells you to use `trigger login set ...` or `trigger register set ...`, that is simply **`/login`** and **`/register`**. Use those commands to log in or to create your account. **Your password must be a number**, for example `/register 482915`.
+>
+> Don't reuse a password from your other accounts: it is stored on the server as a number that server operators can read.
 
 This is configured with **[PandaCommandWhitelist](https://modrinth.com/project/LUNkqJ63)** — thanks to its author for the mod! 🐼
 
