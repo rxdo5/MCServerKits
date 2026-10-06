@@ -20,7 +20,6 @@ This kit is designed to be downloaded, extracted and started with minimal config
 | **Initial RAM**     | 4 GB                                        |
 | **Maximum RAM**     | 8 GB                                        |
 | **Mod Count**       | 70                                          |
-
 ---
 
 ## ✨ Features
@@ -35,7 +34,58 @@ This kit is designed to be downloaded, extracted and started with minimal config
 * 🏆 **Advancements** — Includes BlazeandCave's Advancements Pack (1,000+ extra advancements) as a data pack.
 * 💬 **Custom chat** — Styled Chat with emoji shortcodes and handy chat shortcuts (`:shrug:`, `:item:`, `:pos:`...).
 * 📊 **Performance monitoring** — Spark is included for server profiling and diagnostics.
+---
 
+## ⚙️ Recommended Hardware
+
+The actual requirements depend heavily on player count, simulation distance, view distance and world size.
+
+As a starting point:
+
+| Resource    | Recommendation                                 |
+| ----------- | ---------------------------------------------- |
+| **CPU**     | Modern CPU with strong single-core performance |
+| **RAM**     | 8 GB available for the server                  |
+| **Storage** | SSD recommended                                |
+| **Network** | Stable low-latency connection                  |
+| **Java**    | Version compatible with Minecraft 26.2         |
+
+> The `-Xmx8G` setting does **not** mean the entire machine only needs 8 GB of RAM.
+---
+
+## 🚀 Getting Started
+
+Because this is a **premade server kit**, no manual mod installation should be necessary. The mods and the data pack are not stored in this repository: on the first start they are downloaded from their original source (Modrinth) and verified by hash, so an internet connection is required.
+
+1. Download the kit.
+2. Extract it.
+3. Make sure a compatible Java version is available.
+4. Accept the Minecraft EULA.
+5. Adjust `server.properties` if required.
+6. Run the provided `start.*` script.
+7. Configure LuckPerms and other server-specific settings as needed.
+8. Start playing.
+
+For the general installation and startup instructions, see the main **MCServerKits** README.
+---
+
+## ⚠️ Important
+
+This kit contains mods with different dependencies and compatibility requirements.
+
+**Do not remove or update individual mods without checking compatibility with Minecraft 26.2 and the rest of the kit.**
+
+The start scripts restore every mod listed in `mods.lock.tsv` and every data pack listed in `datapacks.lock.tsv`. To permanently remove one of them, also delete its line from that file.
+
+Some mods may also have specific configuration or server requirements.
+
+Before making major changes, create a backup of:
+
+```text
+world/
+config/
+server.properties
+```
 ---
 
 ## 📦 Included Mods
@@ -130,87 +180,69 @@ This kit is designed to be downloaded, extracted and started with minimal config
 * **MidnightLib** — `1.9.3+26.2`
 * **ToadLib** — `1.5.1`
 * **ZConfig** — `1.0.0+26.x`
-
 ---
 
-## ☕ Java Arguments
+## 🌟 Gameplay Highlights
 
-The server uses **G1GC** with a configuration based on **Aikar's JVM flags**.
+A quick look at some of the gameplay mods included in this kit.
 
-### Recommended startup command
+### 🛡️ Claims & Parties — [Open Parties and Claims](https://modrinth.com/project/gF3BGWvG)
 
-```bash
-java -Xms4G -Xmx8G \
--XX:+UseG1GC \
--XX:+ParallelRefProcEnabled \
--XX:MaxGCPauseMillis=200 \
--XX:+UnlockExperimentalVMOptions \
--XX:+DisableExplicitGC \
--XX:+AlwaysPreTouch \
--XX:G1NewSizePercent=30 \
--XX:G1MaxNewSizePercent=40 \
--XX:G1HeapRegionSize=8M \
--XX:G1ReservePercent=20 \
--XX:G1HeapWastePercent=5 \
--XX:G1MixedGCCountTarget=4 \
--XX:InitiatingHeapOccupancyPercent=15 \
--XX:G1MixedGCLiveThresholdPercent=90 \
--XX:G1RSetUpdatingPauseTimePercent=5 \
--XX:SurvivorRatio=32 \
--XX:+PerfDisableSharedMem \
--XX:MaxTenuringThreshold=1 \
--Dusing.aikars.flags=https://mcflags.emc.gs \
--Daikars.new.flags=true \
--jar server.jar nogui
+Protect your builds by claiming chunks, and team up with your friends in parties.
+
+* `/oclaims` — claim and unclaim chunks and manage your claims.
+* `/oparties` — create a party and invite your friends.
+* `/opm <message>` — send a message to your party chat.
+* Press **Tab** after any of these commands to see every sub-command.
+* Players who also install the mod on their client get an in-game menu.
+
+### 🔥 Healing Campfire — [Healing Campfire](https://modrinth.com/project/kOuPUitF)
+
+Standing near a lit campfire or soul campfire gives **Regeneration** to players and passive mobs. In this kit: Regeneration I within a 4-block radius, refreshed while you stay close. Made by Serilum.
+
+### 🖼️ Invisible Frames — [Invisible Frames](https://modrinth.com/project/QD87oMUf)
+
+**Sneak + right-click** an item frame to make it invisible. Do it again to make it visible. It is server-side, so every player can use it without installing anything. Made by Roundaround.
+
+### 🧟 Mob Heads & Mob Heads Powers — [Mob Heads](https://modrinth.com/project/82uI0waE) · [Mob Heads Powers](https://modrinth.com/project/JuEY513F)
+
+* **Mob Heads:** mobs can drop their head when a player kills them (or a charged creeper, configurable). There are 500+ unique heads (every mob, baby and variant), custom note block sounds, an advancement collection and a chat notification when a head drops. Looting does not change the drop rates.
+* **Mob Heads Powers:** **wear a mob head on your head to get a power.** For example, the Axolotl head gives longer water breathing, the Turtle head gives extra resistance but slows you down, and the Dolphin head gives Dolphin's Grace but also hunger and blindness.
+
+Both are made by Jodek, and Mob Heads Powers only works together with Mob Heads.
+
+### 💀 Players Drop Heads — [Players Drop Heads](https://modrinth.com/project/NU7qMnLN)
+
+When a player is killed by another player, they drop their own head.
+
+### 📏 Random Mob Sizes — [Random Mob Sizes](https://modrinth.com/project/aKeMRgHX)
+
+Mobs spawn in random sizes, from tiny to huge. By default a mob's health scales with its size, and the sizes can be configured per mob. It is server-side, so no client mod is needed.
+---
+
+## 📜 Data Packs
+
+### 🏆 BlazeandCave's Advancements Pack — [Modrinth](https://modrinth.com/project/VoVJ47kN)
+
+Adds **1,000+ new advancements** across 16 tabs (mining, farming, animals, monsters, biomes, redstone, enchanting, potions, super challenges and more), plus an advancement scoreboard, item rewards, trophies, cooperative mode and teams.
+
+Created by **Cavinator1** — thank you for this amazing pack! 🏆
+
+**How it is installed**
+
+The author's license does not allow redistributing the pack, so it is **not stored in this repository**. Like the mods, it is downloaded from Modrinth by the start scripts (it is listed in `datapacks.lock.tsv`) and placed in `world/datapacks/` **before the world is created**. Minecraft then loads it automatically the first time the server starts.
+
+**Configuration (operators only)**
+
+```text
+/function blazeandcave:config
 ```
 
-> **Note:** `-Xms4G` sets the initial Java heap to 4 GB, while `-Xmx8G` allows the server to use up to 8 GB of heap memory.
+From that menu you can toggle item rewards, trophies and the welcome message, choose which advancement tiers are announced, show the advancements scoreboard in the tab list or sidebar, and enable cooperative mode.
+
+> The pack was designed for vanilla servers and the author cannot guarantee compatibility with mods, so a few advancements may behave differently on this kit.
 >
-> The machine should have additional RAM available for the operating system, native memory, libraries and other processes.
-
----
-
-## 🗺️ World Pre-generation
-
-**Chunky** is included to allow the world to be pre-generated before players begin exploring.
-
-Example:
-
-```text
-/chunky radius 5000
-/chunky start
-```
-
-Pre-generating the world can significantly reduce the workload caused by generating new terrain while players are exploring.
-
-> The required pre-generation time depends on the selected world size and available hardware.
-
----
-
-## 📊 Performance Monitoring
-
-**Spark** is included for performance monitoring and profiling.
-
-Useful commands include:
-
-```text
-/spark tps
-/spark health
-/spark profiler start
-```
-
-Spark can be used to investigate TPS issues, CPU usage and other server performance problems.
-
----
-
-## 🌐 Bedrock Support
-
-This kit includes **Geyser-Fabric**, allowing Minecraft Bedrock Edition players to connect to the Java Edition server.
-
-**SkinRestorer** is also included for improved skin compatibility.
-
-Additional Geyser configuration may be required depending on your network setup.
-
+> Spanish and other languages: players can install the optional [BACAP Language Pack](https://modrinth.com/resourcepack/bacap-language-pack) resource pack to translate the advancements.
 ---
 
 ## 💬 Chat Emojis & Shortcuts
@@ -260,7 +292,6 @@ The list can be changed in the **Styled Chat** configuration file (`config/style
 * The **value** is what it turns into. It can be plain text, an emoji or a placeholder such as `%player:pos_x%`.
 * `$emojibase:builtin:joypixels` loads the full JoyPixels emoji set. Remove that line to disable the built-in emojis.
 * Apply your changes with `/styledchat reload` (or restart the server).
-
 ---
 
 ## ⌨️ Commands Available in Survival
@@ -268,7 +299,7 @@ The list can be changed in the **Styled Chat** configuration file (`config/style
 These are the commands players can use in survival. Every other command is hidden from the command suggestions and blocked.
 
 > [!IMPORTANT]
-> **Login & Register:** even if the game tells you to use `trigger login set ...` or `trigger register set ...`, that is simply **`/login`** and **`/register`**. Use those commands to log in or to create your account.
+> **Login & Register:** even if the game tells you to use `trigger login set ...` or `trigger register set ...`, that is simply **`/login`** and **`/register`**. Use those commands to log in or to create your account. **Your password must be a number**, for example `/register 482915`.
 
 This is configured with **[PandaCommandWhitelist](https://modrinth.com/project/LUNkqJ63)** — thanks to its author for the mod! 🐼
 
@@ -285,19 +316,20 @@ This is configured with **[PandaCommandWhitelist](https://modrinth.com/project/L
 | `/tpa <player>` | Send a teleport request to a player. |
 | `/tpaccept` | Accept a pending teleport request. |
 | `/pets` | Pet management. |
-| `/register` | Create your account the first time you join (login system). See the **important note** above. |
-| `/login` | Log in every time you join. See the **important note** above. |
-| `/changepassword` | Change your password. |
+| `/register <password>` | Create your account the first time you join (login system). The password must be a number. See the **important note** above. |
+| `/login <password>` | Log in every time you join. See the **important note** above. |
+| `/changepassword <password>` | Change your password (it must be a number). |
 | `/pos` | Send your current coordinates (X Y Z) to the chat so everyone can see them. |
 | `/item` | Show the item you are holding in your main hand to everyone in the chat. |
 | `/oclaims` | Manage the chunk claims you own on the server or claim new ones. |
 | `/oparties` | Create or join a party with your friends. |
+| `/opm <message>` | Send a message to your party chat. |
 
 > 💡 You can also use the **chat shortcuts** `:pos:` and `:item:` (from Styled Chat) inside a normal message, for example: `I found diamonds at :pos:` or `Look at my :item:`. They show the same information, but inside your own text.
 
 ### Customizing the allowed commands
 
-The list lives in the **PandaCommandWhitelist** config file (inside `config/`):
+The list lives in `config/PandaCommandWhitelist.json`:
 
 ```json
 {
@@ -324,8 +356,9 @@ The list lives in the **PandaCommandWhitelist** config file (inside `config/`):
     "pos",
     "item",
 
-    "oclaims*",
-    "oparties*"
+    "oclaims *",
+    "oparties *",
+    "opm *"
   ],
   "blockedMessage": "That command is blocked or doesn\u0027t exist."
 }
@@ -334,126 +367,82 @@ The list lives in the **PandaCommandWhitelist** config file (inside `config/`):
 * Each entry is a command that is allowed. A trailing `*` is a wildcard that allows any arguments (`"tell *"` allows `/tell Steve hello`); without it, only the bare command is allowed.
 * `blockedMessage` is what players see when they try a command that is not on the list.
 * To allow another command, add it to `commands` and restart the server.
-
 ---
 
-## 🌟 Gameplay Highlights
+## 🌐 Bedrock Support
 
-A quick look at some of the gameplay mods included in this kit.
+This kit includes **Geyser-Fabric**, allowing Minecraft Bedrock Edition players to connect to the Java Edition server.
 
-### 🛡️ Claims & Parties — [Open Parties and Claims](https://modrinth.com/project/gF3BGWvG)
+**SkinRestorer** is also included for improved skin compatibility.
 
-Protect your builds by claiming chunks, and team up with your friends in parties.
-
-* `/oclaims` — claim and unclaim chunks and manage your claims.
-* `/oparties` — create a party and invite your friends.
-* Press **Tab** after either command to see every sub-command.
-* Players who also install the mod on their client get an in-game menu.
-
-### 🔥 Healing Campfire — [Healing Campfire](https://modrinth.com/project/kOuPUitF)
-
-Standing near a campfire or a soul campfire gives **Regeneration** to players and passive mobs. By default: 16-block radius, Regeneration I, and the effect refreshes while you stay close. Made by Serilum.
-
-### 🖼️ Invisible Frames — [Invisible Frames](https://modrinth.com/project/QD87oMUf)
-
-**Sneak + right-click** an item frame to make it invisible. Do it again to make it visible. It is server-side, so every player can use it without installing anything. Made by Roundaround.
-
-### 🧟 Mob Heads & Mob Heads Powers — [Mob Heads](https://modrinth.com/project/82uI0waE) · [Mob Heads Powers](https://modrinth.com/project/JuEY513F)
-
-* **Mob Heads:** mobs can drop their head when a player kills them (or a charged creeper, configurable). There are 500+ unique heads (every mob, baby and variant), custom note block sounds, an advancement collection and a chat notification when a head drops. Looting does not change the drop rates.
-* **Mob Heads Powers:** **wear a mob head on your head to get a power.** For example, the Axolotl head gives longer water breathing, the Turtle head gives extra resistance but slows you down, and the Dolphin head gives Dolphin's Grace but also hunger and blindness.
-
-Both are made by Jodek, and Mob Heads Powers only works together with Mob Heads.
-
-### 💀 Players Drop Heads — [Players Drop Heads](https://modrinth.com/project/NU7qMnLN)
-
-When a player is killed by another player, they drop their own head.
-
-### 📏 Random Mob Sizes — [Random Mob Sizes](https://modrinth.com/project/aKeMRgHX)
-
-Mobs spawn in random sizes, from tiny to huge. By default a mob's health scales with its size, and the sizes can be configured per mob. It is server-side, so no client mod is needed.
-
+Additional Geyser configuration may be required depending on your network setup.
 ---
 
-## 📜 Data Packs
+## 🗺️ World Pre-generation
 
-### 🏆 BlazeandCave's Advancements Pack — [Modrinth](https://modrinth.com/project/VoVJ47kN)
+**Chunky** is included to allow the world to be pre-generated before players begin exploring.
 
-Adds **1,000+ new advancements** across 16 tabs (mining, farming, animals, monsters, biomes, redstone, enchanting, potions, super challenges and more), plus an advancement scoreboard, item rewards, trophies, cooperative mode and teams.
-
-Created by **Cavinator1** — thank you for this amazing pack! 🏆
-
-**How it is installed**
-
-The author's license does not allow redistributing the pack, so it is **not stored in this repository**. Like the mods, it is downloaded from Modrinth by the start scripts (it is listed in `datapacks.lock.tsv`) and placed in `world/datapacks/` **before the world is created**. Minecraft then loads it automatically the first time the server starts.
-
-**Configuration (operators only)**
+Example:
 
 ```text
-/function blazeandcave:config
+/chunky radius 5000
+/chunky start
 ```
 
-From that menu you can toggle item rewards, trophies and the welcome message, choose which advancement tiers are announced, show the advancements scoreboard in the tab list or sidebar, and enable cooperative mode.
+Pre-generating the world can significantly reduce the workload caused by generating new terrain while players are exploring.
 
-> The pack was designed for vanilla servers and the author cannot guarantee compatibility with mods, so a few advancements may behave differently on this kit.
+> The required pre-generation time depends on the selected world size and available hardware.
+---
+
+## 📊 Performance Monitoring
+
+**Spark** is included for performance monitoring and profiling.
+
+Useful commands include:
+
+```text
+/spark tps
+/spark health
+/spark profiler start
+```
+
+Spark can be used to investigate TPS issues, CPU usage and other server performance problems.
+---
+
+## ☕ Java Arguments
+
+The server uses **G1GC** with a configuration based on **Aikar's JVM flags**.
+
+### Recommended startup command
+
+```bash
+java -Xms4G -Xmx8G \
+-XX:+UseG1GC \
+-XX:+ParallelRefProcEnabled \
+-XX:MaxGCPauseMillis=200 \
+-XX:+UnlockExperimentalVMOptions \
+-XX:+DisableExplicitGC \
+-XX:+AlwaysPreTouch \
+-XX:G1NewSizePercent=30 \
+-XX:G1MaxNewSizePercent=40 \
+-XX:G1HeapRegionSize=8M \
+-XX:G1ReservePercent=20 \
+-XX:G1HeapWastePercent=5 \
+-XX:G1MixedGCCountTarget=4 \
+-XX:InitiatingHeapOccupancyPercent=15 \
+-XX:G1MixedGCLiveThresholdPercent=90 \
+-XX:G1RSetUpdatingPauseTimePercent=5 \
+-XX:SurvivorRatio=32 \
+-XX:+PerfDisableSharedMem \
+-XX:MaxTenuringThreshold=1 \
+-Dusing.aikars.flags=https://mcflags.emc.gs \
+-Daikars.new.flags=true \
+-jar server.jar nogui
+```
+
+> **Note:** `-Xms4G` sets the initial Java heap to 4 GB, while `-Xmx8G` allows the server to use up to 8 GB of heap memory.
 >
-> Spanish and other languages: players can install the optional [BACAP Language Pack](https://modrinth.com/resourcepack/bacap-language-pack) resource pack to translate the advancements.
-
----
-
-## ⚙️ Recommended Hardware
-
-The actual requirements depend heavily on player count, simulation distance, view distance and world size.
-
-As a starting point:
-
-| Resource    | Recommendation                                 |
-| ----------- | ---------------------------------------------- |
-| **CPU**     | Modern CPU with strong single-core performance |
-| **RAM**     | 8 GB available for the server                  |
-| **Storage** | SSD recommended                                |
-| **Network** | Stable low-latency connection                  |
-| **Java**    | Version compatible with Minecraft 26.2         |
-
-> The `-Xmx8G` setting does **not** mean the entire machine only needs 8 GB of RAM.
-
----
-
-## 🚀 Getting Started
-
-Because this is a **premade server kit**, no manual mod installation should be necessary. The mods and the data pack are not stored in this repository: on the first start they are downloaded from their original source (Modrinth) and verified by hash, so an internet connection is required.
-
-1. Download the kit.
-2. Extract it.
-3. Make sure a compatible Java version is available.
-4. Accept the Minecraft EULA.
-5. Adjust `server.properties` if required.
-6. Run the provided `start.*` script.
-7. Configure LuckPerms and other server-specific settings as needed.
-8. Start playing.
-
-For the general installation and startup instructions, see the main **MCServerKits** README.
-
----
-
-## ⚠️ Important
-
-This kit contains mods with different dependencies and compatibility requirements.
-
-**Do not remove or update individual mods without checking compatibility with Minecraft 26.2 and the rest of the kit.**
-
-The start scripts restore every mod listed in `mods.lock.tsv` and every data pack listed in `datapacks.lock.tsv`. To permanently remove one of them, also delete its line from that file.
-
-Some mods may also have specific configuration or server requirements.
-
-Before making major changes, create a backup of:
-
-```text
-world/
-config/
-server.properties
-```
-
+> The machine should have additional RAM available for the operating system, native memory, libraries and other processes.
 ---
 
 ## 📄 License & Mod Credits
@@ -465,7 +454,6 @@ This kit does **not** claim ownership of any third-party mods or data packs. **B
 See [`mods-audit.csv`](mods-audit.csv) for the list of mods and [`datapacks-audit.csv`](datapacks-audit.csv) for the data pack, with their project pages and the license each author declares. Please refer to each mod's license and distribution terms before redistributing any mod.
 
 For the license applying to **MCServerKits**, see the repository's [`LICENSE`](../LICENSE) file.
-
 ---
 
 ## 🎮 Part of MCServerKits
