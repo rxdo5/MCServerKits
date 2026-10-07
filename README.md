@@ -189,7 +189,7 @@ You are **not** allowed to:
 
 **These restrictions apply only to the original content of this repository.**
 
-Third-party components retain their own licenses and are not covered by the MCServerKits License, which only covers the original MCServerKits content. Every mod and data pack is licensed by its respective author, and the `start.*` / `install_java.*` scripts are © Griefed ([ServerPackCreator](https://github.com/Griefed/ServerPackCreator)) under the LGPL-2.1-or-later. The included `server.jar` is based on [NeoForged's ServerStarterJar](https://github.com/neoforged/ServerStarterJar) and is subject to its own license terms.
+Third-party components retain their own licenses and are not covered by the MCServerKits License, which only covers the original MCServerKits content. Every mod and data pack is licensed by its respective author, and the `start.*` / `install_java.*` scripts are © Griefed ([ServerPackCreator](https://github.com/Griefed/ServerPackCreator)) under the LGPL-2.1-or-later. Some of the included `server.jar` are based on [NeoForged's ServerStarterJar](https://github.com/neoforged/ServerStarterJar) and are subject to its own license terms.
 
 **Commercial use of the server is subject to the individual licenses of the included mods. Please consult the `mods-audit.csv` file (and `datapacks-audit.csv`, if the pack includes data packs) in each corresponding pack for licensing and commercial-use information.**
 
