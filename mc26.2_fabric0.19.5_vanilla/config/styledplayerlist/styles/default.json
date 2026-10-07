@@ -1,0 +1,21 @@
+{
+  "style_name": "Vanilla",
+  "update_tick_time": 20,
+  "list_header": [
+    "",
+    "<bold><aqua>✦ VANILLA ✦</aqua></bold>",
+    "<aqua>━━━━━━━━━━━━</aqua>",
+    "<gray>Players <dark_gray>•</dark_gray> <white>%server:online%</white><dark_gray>/</dark_gray><white>%server:max_players%</white></gray>",
+    ""
+  ],
+  "list_footer": [
+    "",
+    "<aqua>━━━━━━━━━━━━</aqua>",
+    "<gray>TPS <white>%server:tps_colored%</white> <dark_gray>•</dark_gray> Ping <yellow>%player:ping%</yellow></gray>",
+    "",
+    "<color #B06CFF>github.com/</color>",
+    "<color #B06CFF>rxdo5</color>",
+    ""
+  ],
+  "hidden_in_commands": false
+}
