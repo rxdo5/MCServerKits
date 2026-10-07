@@ -19,6 +19,7 @@ This kit is designed to be downloaded, extracted and started with minimal config
 | **Java**            | Java version compatible with Minecraft 26.2 |
 | **Initial RAM**     | 4 GB                                        |
 | **Maximum RAM**     | 8 GB                                        |
+| **Online Mode**     | Enabled (Mojang authentication)             |
 | **Mod Count**       | 71                                          |
 
 ---
