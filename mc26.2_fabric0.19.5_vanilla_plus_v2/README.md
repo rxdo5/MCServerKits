@@ -19,7 +19,8 @@ This kit is designed to be downloaded, extracted and started with minimal config
 | **Java**            | Java version compatible with Minecraft 26.2 |
 | **Initial RAM**     | 4 GB                                        |
 | **Maximum RAM**     | 8 GB                                        |
-| **Mod Count**       | 70                                          |
+| **Mod Count**       | 71                                          |
+
 ---
 
 ## ✨ Features
@@ -34,6 +35,7 @@ This kit is designed to be downloaded, extracted and started with minimal config
 * 🏆 **Advancements** — Includes BlazeandCave's Advancements Pack (1,000+ extra advancements) as a data pack.
 * 💬 **Custom chat** — Styled Chat with emoji shortcodes and handy chat shortcuts (`:shrug:`, `:item:`, `:pos:`...).
 * 📊 **Performance monitoring** — Spark is included for server profiling and diagnostics.
+
 ---
 
 ## ⚙️ Recommended Hardware
@@ -51,6 +53,7 @@ As a starting point:
 | **Java**    | Version compatible with Minecraft 26.2         |
 
 > The `-Xmx8G` setting does **not** mean the entire machine only needs 8 GB of RAM.
+
 ---
 
 ## 🚀 Getting Started
@@ -67,6 +70,7 @@ Because this is a **premade server kit**, no manual mod installation should be n
 8. Start playing.
 
 For the general installation and startup instructions, see the main **MCServerKits** README.
+
 ---
 
 ## ⚠️ Important
@@ -86,6 +90,7 @@ world/
 config/
 server.properties
 ```
+
 ---
 
 ## 📦 Included Mods
@@ -94,7 +99,7 @@ server.properties
 
 * **Alternate Current** — `1.9.0`
 * **Brainier Bees** — `1.10.2`
-* **C2ME** — `0.4.2-alpha.0.55`
+* **C2ME** — `0.4.2-alpha.0.56`
 * **Clumps** — `26.2.1`
 * **FerriteCore** — `9.0.0`
 * **Get It Together, Drops!** — `1.5.1`
@@ -125,7 +130,7 @@ server.properties
 * **Ledger** — `1.3.23`
 * **Log Cleaner** — `1.0.0`
 * **LuckPerms** — `5.5.85`
-* **Open Parties and Claims** — `0.31.6`
+* **Open Parties and Claims** — `0.32.7`
 * **Panda Command Whitelist** — `1.2.0+26.2`
 * **Spark** — `1.10.187`
 
@@ -135,22 +140,22 @@ server.properties
 * **Dynamic Lights** — `1.9.3`
 * **FSit Continued** — `4.0.0-alpha.1+mc26.2`
 * **Fuji** — `14.12.0`
-* **Healing Campfire** — `6.3`
+* **Healing Campfire** — `6.4`
 * **Invisible Frames** — `2.0.1+26.2`
 * **Mob Heads** — `5.1.1`
-* **Mob Heads Powers** — `2.1.4`
+* **Mob Heads Powers** — `2.1.5`
 * **More Mobs** — `1.5.11`
 * **Players Drop Heads** — `107.1`
 * **Random Mob Sizes** — `—`
 * **Server Carry** — `—`
 * **Set Home** — `0.0.2`
-* **Skeleton Horse Spawn** — `4.1`
-* **SwingThroughGrass** — `1.0.1`
+* **Skeleton Horse Spawn** — `4.2`
+* **SwingThroughGrass** — `1.1.0`
 * **TPA Mod** — `1.3.1`
-* **Tree Harvester** — `9.4`
+* **Tree Harvester** — `10.0`
 * **Unloaded Activity** — `0.7.0+mc26.2`
 * **Veinminer** — `2.12.1`
-* **Zombie Horse Spawn** — `5.2`
+* **Zombie Horse Spawn** — `5.3`
 
 ### 💬 Social & Presentation
 
@@ -162,7 +167,7 @@ server.properties
 
 * **Debugify** — `26.2.0.1`
 * **Disconnect Packet Fix** — `2.2.0`
-* **Geyser-Fabric** — `2.11.3-b1247`
+* **Geyser-Fabric** — `2.11.3-b1249`
 * **I'm Fast** — `1.0.3`
 * **PacketFixer** — `3.3.6`
 * **Pet Teleport Fix** — `2.0-alpha-3.7`
@@ -171,7 +176,8 @@ server.properties
 ### 🧩 Libraries & Dependencies
 
 * **Almanac** — `26.2-1.26.9.1`
-* **Collective** — `26.2.0-8.40`
+* **Architectury API** — `21.1.11`
+* **Collective** — `26.2.0-8.42`
 * **CoreLib** — `1.1.1`
 * **Fabric API** — `0.161.0+26.2`
 * **Fabric Language Kotlin** — `1.14.1+kotlin.2.4.20`
@@ -180,6 +186,7 @@ server.properties
 * **MidnightLib** — `1.9.3+26.2`
 * **ToadLib** — `1.5.1`
 * **ZConfig** — `1.0.0+26.x`
+
 ---
 
 ## 🌟 Gameplay Highlights
@@ -218,6 +225,7 @@ When a player is killed by another player, they drop their own head.
 ### 📏 Random Mob Sizes — [Random Mob Sizes](https://modrinth.com/project/aKeMRgHX)
 
 Mobs spawn in random sizes, from tiny to huge. By default a mob's health scales with its size, and the sizes can be configured per mob. It is server-side, so no client mod is needed.
+
 ---
 
 ## 📜 Data Packs
@@ -243,6 +251,7 @@ From that menu you can toggle item rewards, trophies and the welcome message, ch
 > The pack was designed for vanilla servers and the author cannot guarantee compatibility with mods, so a few advancements may behave differently on this kit.
 >
 > Spanish and other languages: players can install the optional [BACAP Language Pack](https://modrinth.com/resourcepack/bacap-language-pack) resource pack to translate the advancements.
+
 ---
 
 ## 💬 Chat Emojis & Shortcuts
@@ -292,6 +301,7 @@ The list can be changed in the **Styled Chat** configuration file (`config/style
 * The **value** is what it turns into. It can be plain text, an emoji or a placeholder such as `%player:pos_x%`.
 * `$emojibase:builtin:joypixels` loads the full JoyPixels emoji set. Remove that line to disable the built-in emojis.
 * Apply your changes with `/styledchat reload` (or restart the server).
+
 ---
 
 ## ⌨️ Commands Available in Survival
@@ -369,6 +379,7 @@ The list lives in `config/PandaCommandWhitelist.json`:
 * Each entry is a command that is allowed. A trailing `*` is a wildcard that allows any arguments (`"tell *"` allows `/tell Steve hello`); without it, only the bare command is allowed.
 * `blockedMessage` is what players see when they try a command that is not on the list.
 * To allow another command, add it to `commands` and restart the server.
+
 ---
 
 ## 🌐 Bedrock Support
@@ -378,6 +389,7 @@ This kit includes **Geyser-Fabric**, allowing Minecraft Bedrock Edition players 
 **SkinRestorer** is also included for improved skin compatibility.
 
 Additional Geyser configuration may be required depending on your network setup.
+
 ---
 
 ## 🗺️ World Pre-generation
@@ -394,6 +406,7 @@ Example:
 Pre-generating the world can significantly reduce the workload caused by generating new terrain while players are exploring.
 
 > The required pre-generation time depends on the selected world size and available hardware.
+
 ---
 
 ## 📊 Performance Monitoring
@@ -409,6 +422,7 @@ Useful commands include:
 ```
 
 Spark can be used to investigate TPS issues, CPU usage and other server performance problems.
+
 ---
 
 ## ☕ Java Arguments
@@ -445,6 +459,7 @@ java -Xms4G -Xmx8G \
 > **Note:** `-Xms4G` sets the initial Java heap to 4 GB, while `-Xmx8G` allows the server to use up to 8 GB of heap memory.
 >
 > The machine should have additional RAM available for the operating system, native memory, libraries and other processes.
+
 ---
 
 ## 📄 License & Mod Credits
@@ -456,6 +471,7 @@ This kit does **not** claim ownership of any third-party mods or data packs. **B
 See [`mods-audit.csv`](mods-audit.csv) for the list of mods and [`datapacks-audit.csv`](datapacks-audit.csv) for the data pack, with their project pages and the license each author declares. Please refer to each mod's license and distribution terms before redistributing any mod.
 
 For the license applying to **MCServerKits**, see the repository's [`LICENSE`](../LICENSE) file.
+
 ---
 
 ## 🎮 Part of MCServerKits
