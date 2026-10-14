@@ -1,0 +1,14 @@
+{
+  "enable": "TRUE",
+  "enable_on_fire": "TRUE",
+  "enable_glowing": "TRUE",
+  "enable_ghast": "TRUE",
+  "enable_enchanted_items": "TRUE",
+  "enable_amethyst_trimmed": "TRUE",
+  "enable_fire_aspect": "TRUE",
+  "enable_riptide": "TRUE",
+  "enable_channeling": "TRUE",
+  "enable_water_sensitive": "TRUE",
+  "enable_sound": "TRUE",
+  "enable_rain_sensitive": "TRUE"
+}
